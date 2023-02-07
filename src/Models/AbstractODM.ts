@@ -15,6 +15,16 @@ abstract class AbstractODM<T> {
     const result = await this.model.create({ ...obj });
     return result;
   }
+
+  async find(): Promise<T[]> {
+    return this.model.find();
+  }
+
+  async findCarById(_id: string): Promise<T | null> {
+    return this.model.findById({ _id });
+  }
 }
+
+// https://www.mongodb.com/docs/manual/reference/bson-types/#std-label-objectid
 
 export default AbstractODM;

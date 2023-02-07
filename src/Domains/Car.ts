@@ -1,7 +1,7 @@
 import ICar from '../Interfaces/ICar';
 
 export default class Car {
-  protected id?: string | undefined;
+  protected id?: string | undefined | null;
   protected model: string;
   protected year: number;
   protected color: string;
