@@ -20,11 +20,11 @@ abstract class AbstractODM<T> {
     return this.model.find();
   }
 
-  async findCarById(_id: string): Promise<T | null> {
+  async findVehicleById(_id: string): Promise<T | null> {
     return this.model.findById({ _id });
   }
 
-  async updateCar(_id: string, obj: T): Promise<T | null> {
+  async updateVehicle(_id: string, obj: T): Promise<T | null> {
     return this.model.findByIdAndUpdate(
       { _id },
       { ...obj } as UpdateQuery<T>,

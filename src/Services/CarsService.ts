@@ -22,13 +22,13 @@ export default class CarsService {
 
   public async findCarById(_id: string) {
     const carODM = new CarODM();
-    const carId = await carODM.findCarById(_id);
+    const carId = await carODM.findVehicleById(_id);
     return this.carDomain(carId);
   }
 
   public async updateCarById(_id: string, car: ICar) {
     const carODM = new CarODM();
-    const update = await carODM.updateCar(_id, car);
+    const update = await carODM.updateVehicle(_id, car);
     return this.carDomain(update);
   }
 }
