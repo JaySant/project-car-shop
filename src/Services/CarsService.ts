@@ -3,7 +3,7 @@ import ICar from '../Interfaces/ICar';
 import CarODM from '../Models/CarODM';
 
 export default class CarsService {
-  private carDomain(car: ICar | null): Car | null {
+  public carDomain(car: ICar | null): Car | null {
     if (car) { return new Car(car); }
     return null;
   }
